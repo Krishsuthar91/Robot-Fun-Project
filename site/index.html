@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atlas — A robot, taken apart</title>
+  <meta name="description" content="Scroll to watch the robot come apart, piece by piece.">
+  <meta name="theme-color" content="#E1E4E9">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top">Atlas</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#anatomy">Anatomy</a>
+      <a href="#specs">Specs</a>
+      <a class="nav__cta" href="#reserve">Reserve</a>
+    </nav>
+  </header>
+
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loader__count"><span id="loaderNum">0</span>%</div>
+    <div class="loader__bar"><i id="loaderBar"></i></div>
+  </div>
+
+  <main id="top">
+    <!-- Scroll-telling stage: the section is tall, the stage inside is pinned. -->
+    <section class="story" id="story" aria-label="Atlas, assembled and taken apart">
+      <div class="stage">
+        <canvas id="canvas" aria-hidden="true"></canvas>
+
+        <div class="beat beat--left" data-in="0.00" data-out="0.22">
+          <h1>Built to stand<br>where we can’t.</h1>
+          <p>Atlas is a bipedal field robot. Scroll to see what it’s made of.</p>
+        </div>
+
+        <div class="beat beat--right" data-in="0.30" data-out="0.52">
+          <h2>Every joint is a thought.</h2>
+          <p>Torque-sensed actuators in the shoulders, hips and knees keep its balance honest.</p>
+        </div>
+
+        <div class="beat beat--left" data-in="0.58" data-out="0.80">
+          <h2>Open it up.</h2>
+          <p>Armor, spine and limbs separate along clean seams, so a field repair takes minutes.</p>
+        </div>
+
+        <div class="beat beat--center" data-in="0.88" data-out="1.01">
+          <h2>Atlas, in pieces and in whole.</h2>
+        </div>
+
+        <div class="cue" id="cue" aria-hidden="true">
+          <span>Scroll</span><i></i>
+        </div>
+        <div class="meter" aria-hidden="true"><i id="meter"></i></div>
+      </div>
+    </section>
+
+    <section class="panel" id="anatomy">
+      <div class="panel__inner">
+        <h2>Designed for the repair bench as much as the field.</h2>
+        <div class="cols">
+          <p>The exploded view you just scrolled through isn’t a render trick. Atlas ships as modules: head unit, torso core, four limb assemblies, each with its own power and data coupling.</p>
+          <p>Swap a damaged forearm without recalibrating the rest of the body. Every module reports its own wear, so you learn about a worn joint before it fails.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel panel--specs" id="specs">
+      <div class="panel__inner">
+        <h2>Specifications</h2>
+        <dl class="specs">
+          <div><dt>Height</dt><dd>1.82 m</dd></div>
+          <div><dt>Mass</dt><dd>74 kg</dd></div>
+          <div><dt>Runtime</dt><dd>6 h active</dd></div>
+          <div><dt>Payload</dt><dd>25 kg carry</dd></div>
+          <div><dt>Modules</dt><dd>7, hot-swappable</dd></div>
+          <div><dt>Joints</dt><dd>38 actuated</dd></div>
+        </dl>
+        <p class="note">Placeholder figures. Replace with your real product data.</p>
+      </div>
+    </section>
+
+    <section class="panel panel--cta" id="reserve">
+      <div class="panel__inner">
+        <h2>Meet Atlas in person.</h2>
+        <p>Early units are going to a small group of partners this year.</p>
+        <a class="btn" href="fun.html">Request a demo</a>
+      </div>
+      <footer class="foot">© 2026 Atlas Robotics</footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
